@@ -4,16 +4,12 @@ pkgrel=1
 pkgdesc="A package that installs Datomic (Free Edition) as a service"
 arch=('any')
 license=(EPL)
-depends=('wget')
 datomic_version=0.8.4159
-source=(http://downloads.datomic.com/$datomic_version/datomic-free-${datomic_version}.zip)
-md5sums=('2c7a256d4d03405e5659e822687b646b')
-
-build() { 
-  cd "$srcdir/$pkgname-$pkgver/"
-  ls
-}
+source=(http://downloads.datomic.com/$datomic_version/datomic-free-${datomic_version}.zip transactor.properties)
+md5sums=('2c7a256d4d03405e5659e822687b646b' '96a60a728a136b13854e628370f6d1d7')
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver/"
+  mkdir -p $pkgdir/usr/lib/
+  cp -r "$srcdir/datomic-free-${datomic_version}" $pkgdir/usr/lib/datomic
+  cp $srcdir/transactor.properties $pkgdir/usr/lib/datomic/config
 }
