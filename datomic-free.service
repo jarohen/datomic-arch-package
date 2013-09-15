@@ -1,0 +1,12 @@
+[Unit]
+Description = Starts instance of Datomic (Free Edition)
+
+[Service]
+User = james
+Group = users
+Type = simple
+ExecStart = /usr/bin/datomic-free /usr/lib/datomic/config/transactor.properties
+Restart = always
+
+[Install]
+WantedBy = multi-user.target
