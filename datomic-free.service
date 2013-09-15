@@ -5,7 +5,7 @@ Description = Starts instance of Datomic (Free Edition)
 User = james
 Group = users
 Type = simple
-ExecStart = /usr/bin/datomic-free /usr/lib/datomic/config/transactor.properties
+ExecStart = /usr/lib/datomic/bin/transactor /usr/lib/datomic/config/transactor.properties
 Restart = always
 
 [Install]
