@@ -2,8 +2,7 @@
 Description = Starts instance of Datomic (Free Edition)
 
 [Service]
-User = james
-Group = users
+User = datomic
 Type = simple
 ExecStart = /usr/lib/datomic/bin/transactor /usr/lib/datomic/config/transactor.properties
 Restart = always

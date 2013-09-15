@@ -11,7 +11,7 @@ license=('custom:DatomicFreeEditionLicense')
 datomic_version=0.8.4159
 
 source=(http://downloads.datomic.com/$datomic_version/datomic-free-${datomic_version}.zip transactor.properties datomic-free.service)
-md5sums=('2c7a256d4d03405e5659e822687b646b' '96a60a728a136b13854e628370f6d1d7' 'e81463dbcdd55695bd76ba968d839a4f')
+md5sums=('2c7a256d4d03405e5659e822687b646b' '96a60a728a136b13854e628370f6d1d7' '70b657e22e7e2e8d4a558a662f96b7db')
 
 package() {
   mkdir -p $pkgdir/usr/lib/ $pkgdir/usr/lib/systemd/system
