@@ -1,0 +1,12 @@
+pre_install() {
+    useradd -r -d /var/lib/datomic datomic
+}
+
+pre_remove() {
+    systemctl stop datomic-free
+    systemctl disable datomic-free
+}
+
+post_remove() {
+    userdel datomic
+}

@@ -7,7 +7,9 @@ arch=('any')
 depends=('java-environment' 'maven')
 url="http://www.datomic.com/"
 license=('custom:DatomicFreeEditionLicense')
+
 datomic_version=0.8.4159
+
 source=(http://downloads.datomic.com/$datomic_version/datomic-free-${datomic_version}.zip transactor.properties datomic-free.service)
 md5sums=('2c7a256d4d03405e5659e822687b646b' '96a60a728a136b13854e628370f6d1d7' 'd16e482b09530f4ecfea26ace43cde4c')
 
@@ -18,3 +20,5 @@ package() {
   cp $srcdir/transactor.properties $pkgdir/usr/lib/datomic/config/
   cp $srcdir/datomic-free.service $pkgdir/usr/lib/systemd/system/
 }
+
+install=datomic.install
