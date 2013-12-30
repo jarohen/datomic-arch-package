@@ -10,7 +10,7 @@ license=('custom:DatomicFreeEditionLicense')
 
 datomic_version=0.9.4384
 
-source=(http://downloads.datomic.com/$datomic_version/datomic-free-${datomic_version}.zip transactor.properties datomic-free.service)
+source=(datomic-free-$datomic_version.zip::https://my.datomic.com/downloads/free/$datomic_version transactor.properties datomic-free.service)
 md5sums=('0183bbfc33951ff52166fedd6695f46f' '96a60a728a136b13854e628370f6d1d7' '70b657e22e7e2e8d4a558a662f96b7db')
 
 package() {
